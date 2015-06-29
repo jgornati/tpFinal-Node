@@ -10,7 +10,10 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/user');
 
-var app = express();
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/tpFinal');
+
+var app = exports.app = express();
 
 // view engine setup
 
@@ -32,6 +35,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+
+require('./routes/main.js');
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
