@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var empleadoSchema = new Schema({
   nombre: String,
-  apellido: String,a
+  apellido: String,
   mail: String,
   pass: String
 });

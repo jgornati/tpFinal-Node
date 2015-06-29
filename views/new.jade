@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  h1= title
+  form(action='', method='post')
+    div.form-group
+      label(for='name') Nombre:
+      div.input-group
+        span.input-group-addon 
+          i.fa.fa-tag
+        input(type='text', name='name', id='name', class="form-control", placeholder='Nombre aqui...')
+    div.form-group
+      label(for='apellido') Apellido:
+      div.input-group
+        span.input-group-addon 
+          i.fa.fa-tags
+        input(type='text', name='apellido', id='apellido', class="form-control", placeholder='Apellido aqui...')
+    div.form-group
+      label(for='mail') Email:
+      div.input-group
+        span.input-group-addon 
+          i.fa.fa-envelope
+        input(type='email', name='mail', id='mail', class="form-control", placeholder='E-mail aqui...')
+    div.form-group
+      label(for='pass') Contraseña:
+      div.input-group
+        span.input-group-addon 
+          i.fa.fa-key
+        input(type='password', name='pass', id='pass', class="form-control", placeholder='Contraseña aqui...')
+    div.form-group
+      label(for='ConfirmPass') Confirmar Contraseña:
+      div.input-group
+        span.input-group-addon 
+          i.fa.fa-key
+        input(type='password', name='pass2', id='pass2', class="form-control", placeholder='Contraseña aqui...')
+    button.btn.btn-default(type="submit") Agregar
